@@ -1,0 +1,4 @@
+DOMAIN-SUFFIX,cloudflare.com
+IP-CIDR,1.1.1.1/32
+IP-CIDR6,2606:4700:4700::1111/128
+DOMAIN-SUFFIX,zero-trust-client.cloudflareclient.com
