@@ -1,7 +1,8 @@
-#!name=Remove LINE Voom Video
-#!desc=讓 Line 無法讀出 Voom 影片
-#!system=ios
-#!category=Tweaks
+#!name = Remove LINE Voom Video
+#!desc = 讓 Line 無法讀出 Voom 影片
+#!system = ios
+#!category = Tweaks
+
 [Rule]
 URL-REGEX,^https://legy.line-apps.com/ext/videohub/*.*,REJECT
 URL-REGEX,^https://legy.line-apps.com*.*/tl/discover/api/v*.*/recommendTab/feeds$,REJECT
