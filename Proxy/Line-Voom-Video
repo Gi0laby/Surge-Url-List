@@ -1,5 +1,0 @@
-URL-REGEX,^https://legy.line-apps.com/ext/videohub/*.*,REJECT
-URL-REGEX,^https://legy.line-apps.com*.*/tl/discover/api/v*.*/recommendTab/feeds$,REJECT
-URL-REGEX,^https://legy.line-apps.com*.*/tl/discover/api/v*.*/collage/searchEntry$,REJECT
-URL-REGEX,^https://legy.line-apps.com*.*/tl/api/v*.*/feed$,REJECT
-URL-REGEX,^https://legy.line-apps.com*.*/tl/api/v*.*/timeline/*.*,REJECT
