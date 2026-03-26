@@ -24,9 +24,16 @@ $httpClient.get("https://cloudflare.com/cdn-cgi/trace", function(error, response
         const ipv4 = info.ip || "未知";
         const loc = info.loc || "??";
         const colo = info.colo || "未知";
-        const warpStatus = info.warp || "off";   // 直接顯示 on / plus / off
+        
+        // 自訂顯示規則：on=啟用｜一般、plus=啟用｜增強、其他=未啟用
+        let warpStatus = "未啟用";
+        if (info.warp === "plus") {
+            warpStatus = "啟用｜增強";
+        } else if (info.warp === "on") {
+            warpStatus = "啟用｜一般";
+        }
 
-        const content = `IPv4: ${ipv4}\n` +
+        const content = `IPv4: ${ipv4}` +
                         `\n託管中心: ${loc} | ${colo}` +
                         `\n隱私保護: ${warpStatus}`;
 
