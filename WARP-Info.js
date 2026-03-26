@@ -24,7 +24,11 @@ $httpClient.get("https://cloudflare.com/cdn-cgi/trace", function(error, response
         const ipv4 = info.ip || "未知";
         const loc = info.loc || "??";
         const colo = info.colo || "未知";
-        const warpStatus = (info.warp === "on" || info.warp === "plus") ? "PLUS | 增強" : "未啟用";
+        const warpStatus = info.warp === "plus"
+            ? "WARP+ | 增強"
+            : info.warp === "on"
+                ? "WARP | 標準"
+                : "未啟用";
 
         const content = `IPv4: ${ipv4}\n` +
                         `託管中心: ${loc} | ${colo}\n` +
