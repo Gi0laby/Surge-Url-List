@@ -27,9 +27,8 @@ $httpClient.get("https://cloudflare.com/cdn-cgi/trace", function(error, response
         const warpStatus = (info.warp === "on" || info.warp === "plus") ? "PLUS | 增強" : "未啟用";
 
         const content = `IPv4: ${ipv4}\n` +
-                        `IPv6: 查詢中...` +
-                        `\n託管中心: ${loc} | ${colo}` +
-                        `\n隱私保護: ${warpStatus}`;
+                        `託管中心: ${loc} | ${colo}\n` +
+                        `隱私保護: ${warpStatus}`;
 
         $done({
             title: "WARP Info",
