@@ -1,0 +1,11 @@
+#!name=WARP Info 面板
+#!desc=顯示 WARP+ 的 IPv4、託管中心 (TW | TPE)、隱私保護狀態。使用 Cloudflare cdn-cgi/trace 即時更新。
+#!author=童向 (經 AI 協助整理)
+#!icon=https://raw.githubusercontent.com/Gi0laby/Surge-Url-List/main/cloud.png   ; 可自行替換成其他圖示網址，或留空
+#!update-url=https://raw.githubusercontent.com/Gi0laby/Surge-Url-List/main/WARP-info.sgmodule
+
+[Panel]
+WARP-Info = title="WARP Info", content="正在載入 WARP 狀態...", style=info, script-name=WARP-Status, update-interval=30, icon=cloud.fill, icon-color=#FF9500
+
+[Script]
+WARP-Status = script-path=https://raw.githubusercontent.com/Gi0laby/Surge-Url-List/main/WARP-info.js, type=generic
